@@ -6,8 +6,13 @@ class Profile extends StatelessWidget {
   List profiletile = [
     [Icons.person, "EditProfile"],
     [Icons.notifications, "Remainder"],
+    [Icons.timer, "Rest Timer"],
+    [Icons.monitor_weight, "Height | Weight"],
+    [Icons.monitor_weight, "Target Weight"],
+    [Icons.favorite, "Share with Friends"],
     [Icons.feedback, "Feedback"],
-    [Icons.logout, "LogOut"]
+    [Icons.security, "Privacy Policy"],
+    [Icons.logout, "LogOut"],
   ];
 
   @override
@@ -26,43 +31,6 @@ class Profile extends StatelessWidget {
                 backgroundImage: AssetImage("assets/images/exersce.jpg"),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: List.generate(
-                      3,
-                      (index) => Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 90,
-                              width: 100,
-                              decoration: BoxDecoration(
-                                  color: Colors.indigo.shade900,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Column(
-                                children: [
-                                  Text(
-                                    "0",
-                                    style: TextStyle(
-                                        fontSize: 40, color: Colors.grey.shade50),
-                                  ),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                    children: [
-                                      Icon(Icons.fitness_center,
-                                          color: Colors.grey.shade50),
-                                      Text("Kcal",
-                                          style: TextStyle(
-                                              color: Colors.grey.shade50))
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ),
-                          )),
-                ),
-              ),
-              Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 18,vertical: 10),
                 child: Row(
                   children: [
@@ -77,7 +45,7 @@ class Profile extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 450,
+                height: 540,
                 width: 390,
                 child: ListView.builder(
                   itemCount: profiletile.length,

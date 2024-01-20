@@ -1,7 +1,23 @@
+import 'package:fitnessapp/view/pages/home_page/exersice_page/components/body_focus.dart';
+import 'package:fitnessapp/view/pages/profile_page/workout_stats.dart';
 import 'package:flutter/material.dart';
 
+import '../components/picks_for_you.dart';
+
 class Exercise_Page extends StatelessWidget {
-  const Exercise_Page({super.key});
+  Exercise_Page({super.key});
+
+  List exersicestats = [
+    ["12", Icons.sports_gymnastics_outlined, "Workout"],
+    ["120", Icons.local_fire_department_outlined, "Calories"],
+    ["10:00", Icons.timer_outlined, "Minutes"]
+  ];
+  List bodyfocus = [
+    ["Chest", "assets/images/chest.jpg"],
+    ["Arms & shoulder", "assets/images/arms.jpg"],
+    ["Lower body", "assets/images/legs.jpg"],
+    ["Six pack", "assets/images/sixpack.jpg"],
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -13,42 +29,92 @@ class Exercise_Page extends StatelessWidget {
         ),
         backgroundColor: Colors.transparent,
       ),
-      body: Column(
-        children: [
-          Row(
-            children:List.generate(3, (index) => Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 90,
-                width: 90,
-                decoration: BoxDecoration(
-                    color: Colors.indigo.shade900,
-                    borderRadius: BorderRadius.circular(10)
-                ),
-                child: Column(
-                  children: [
-                    Text("0",style: TextStyle(fontSize: 40,color: Colors.grey.shade50),),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Icon(Icons.fitness_center,color: Colors.grey.shade50),
-                        Text("Kcal",style: TextStyle(color: Colors.grey.shade50))
-                      ],
-                    )
-                  ],
-                ),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: Row(
+                children: [
+                  Text(
+                    "Workout stats  ",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.indigo.shade50,
+                        fontSize: 17),
+                  ),
+                  Icon(Icons.data_usage, color: Colors.indigo.shade50),
+                ],
               ),
-            )) ,
-          ),
-          Container(
-            height: 100,
-            width: 350,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: Colors.blueGrey.shade200,
             ),
-          )
-        ],
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: List.generate(
+                    3,
+                    (index) => Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Workout_stats(
+                            count: exersicestats[index][0],
+                            kcal: exersicestats[index][2],
+                            icons: exersicestats[index][1]))),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: Row(
+                children: [
+                  Text(
+                    "Body Focus  ",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.indigo.shade50,
+                        fontSize: 17),
+                  ),
+                  Icon(Icons.accessibility, color: Colors.indigo.shade50),
+                ],
+              ),
+            ),
+            Container(
+              height: 390,
+              width: 390,
+              child: GridView.builder(
+                  itemCount: bodyfocus.length,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2),
+                  itemBuilder: (context, index) => Body_focus(
+                        namee: bodyfocus[index][0],
+                        imgg: bodyfocus[index][1],
+                      )),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: Row(
+                children: [
+                  Text(
+                    "Streching",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.indigo.shade50,
+                        fontSize: 17),
+                  ),
+                  Icon(Icons.accessibility, color: Colors.indigo.shade50),
+                ],
+              ),
+            ),
+            Container(
+              height: 390,
+              width: 390,
+              child: GridView.builder(
+                itemCount: 4,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2),
+                itemBuilder: (context, index) => Picksforyou(),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

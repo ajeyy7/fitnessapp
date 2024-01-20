@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 
 class Food_Container extends StatelessWidget {
   final String img;
+  final String name;
+  final String timeneeded;
+  final String calories;
 
-  const Food_Container({super.key, required this.img});
+  const Food_Container({super.key, required this.img, required this.name, required this.timeneeded, required this.calories});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +35,7 @@ class Food_Container extends StatelessWidget {
                   width: 280,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage(img), fit: BoxFit.cover),
+                        image: NetworkImage(img), fit: BoxFit.cover),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -68,9 +71,9 @@ class Food_Container extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Rice Meals",
+                      name,
                       style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                          TextStyle(fontSize: 17, fontWeight: FontWeight.w500),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -83,7 +86,7 @@ class Food_Container extends StatelessWidget {
                                 Icons.timer,
                                 color: Colors.indigo.shade900,
                               ),
-                              Text("5 Min"),
+                              Text(timeneeded),
                             ],
                           ),
                           Row(
@@ -92,7 +95,7 @@ class Food_Container extends StatelessWidget {
                                 Icons.local_fire_department_outlined,
                                 color: Colors.indigo.shade900,
                               ),
-                              Text("336 kcal")
+                              Text("$calories kcal")
                             ],
                           ),
                         ],

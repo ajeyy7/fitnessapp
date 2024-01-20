@@ -30,6 +30,7 @@ class Yoga_Exersice extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: InkWell(
+          highlightColor: Colors.indigo,
           onTap: onTap,
           child: Container(
             height: 200,
@@ -56,6 +57,7 @@ class Yoga_Exersice extends StatelessWidget {
                   Text(nametxt,
                       style: TextStyle(
                           color: Colors.indigo.shade900,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold)),
                   SizedBox(
                     height: 20,
@@ -64,11 +66,14 @@ class Yoga_Exersice extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.indigo.shade900,
                           fontWeight: FontWeight.bold)),
-                  Row(
-                    children: [
-                      Small_containerr(icon: Icona, txt: txta),
-                      Small_containerr(icon: Iconb, txt: txtb),
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.only(right: 10,bottom: 8,top: 8),
+                    child: Row(
+                      children: [
+                        Small_containerr(icon: Icona, txt: txta),
+                        Small_containerr(icon: Iconb, txt: txtb),
+                      ],
+                    ),
                   ),
                   Small_containerr(icon: Iconc, txt: txtc),
                 ],

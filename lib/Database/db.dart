@@ -1,0 +1,698 @@
+List diet = [
+  {
+    "category": "breakfast",
+    "recipes": [
+      {
+        "name": "Avocado Toast with Poached Eggs",
+        "imageUrl":
+            "https://images.unsplash.com/photo-1613769049987-b31b641f25b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fEF2b2NhZG8lMjBUb2FzdCUyMHdpdGglMjBQb2FjaGVkJTIwRWdnc3xlbnwwfHwwfHx8MA%3D%3D",
+        "timeNeeded": "15 minutes",
+        "calories": "350",
+        "ingredients": [
+          "Whole grain bread",
+          "Avocado",
+          "Eggs",
+          "Salt and pepper to taste"
+        ],
+        "instructions": [
+          "Toast the bread slices.",
+          "Mash avocado and spread it on the toast.",
+          "Poach eggs and place them on top.",
+          "Season with salt and pepper."
+        ]
+      },
+      {
+        "name": "Blueberry Pancakes",
+        "imageUrl":
+            "https://images.unsplash.com/photo-1619592982904-ef0a0da5b7e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEJsdWViZXJyeSUyMFBhbmNha2VzfGVufDB8fDB8fHww",
+        "timeNeeded": "20 minutes",
+        "calories": "400",
+        "ingredients": ["Pancake mix", "Blueberries", "Maple syrup", "Butter"],
+        "instructions": [
+          "Prepare pancake batter according to package instructions.",
+          "Fold in blueberries.",
+          "Cook pancakes on a griddle.",
+          "Serve with maple syrup and butter."
+        ]
+      },
+      {
+        "name": "Greek Yogurt Parfait with Granola",
+        "imageUrl":
+            "https://images.unsplash.com/photo-1593450298063-4e08a162a437?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8R3JlZWslMjBZb2d1cnQlMjBQYXJmYWl0JTIwd2l0aCUyMEdyYW5vbGF8ZW58MHx8MHx8fDA%3D",
+        "timeNeeded": "10 minutes",
+        "calories": "300",
+        "ingredients": ["Greek yogurt", "Granola", "Mixed berries", "Honey"],
+        "instructions": [
+          "Layer Greek yogurt, granola, and mixed berries in a glass.",
+          "Drizzle with honey.",
+          "Repeat the layers and enjoy!"
+        ]
+      },
+      {
+        "name": "Veggie Omelette",
+        "imageUrl":
+            "https://images.unsplash.com/photo-1690896255756-6aaefe25d564?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8VmVnZ2llJTIwT21lbGV0dGV8ZW58MHx8MHx8fDA%3D",
+        "timeNeeded": "15 minutes",
+        "calories": "250",
+        "ingredients": [
+          "Eggs",
+          "Bell peppers",
+          "Tomatoes",
+          "Onion",
+          "Mushrooms",
+          "Spinach",
+          "Cheese",
+          "Salt and pepper to taste"
+        ],
+        "instructions": [
+          "Whisk eggs and season with salt and pepper.",
+          "Sauté bell peppers, tomatoes, onion, mushrooms, and spinach.",
+          "Pour whisked eggs over the veggies, cook until set.",
+          "Sprinkle cheese on top and fold the omelette."
+        ]
+      }
+    ]
+  },
+  {
+    "category": "lunch",
+    "recipes": [
+      {
+        "name": "Grilled Chicken Wrap",
+        "imageUrl":
+            "https://images.unsplash.com/photo-1584947897804-408958123f1d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Q2hpY2tlbiUyMFdyYXB8ZW58MHx8MHx8fDA%3D",
+        "timeNeeded": "20 minutes",
+        "calories": "400",
+        "ingredients": [
+          "Grilled chicken breast",
+          "Whole wheat tortilla",
+          "Lettuce",
+          "Tomato",
+          "Greek yogurt dressing"
+        ],
+        "instructions": [
+          "Grill chicken until fully cooked.",
+          "Warm the tortilla and assemble the wrap.",
+          "Add grilled chicken, lettuce, and tomato.",
+          "Drizzle with Greek yogurt dressing."
+        ]
+      },
+      {
+        "name": "Quinoa Salad with Chickpeas",
+        "imageUrl":
+            "https://images.unsplash.com/photo-1505576633757-0ac1084af824?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "timeNeeded": "15 minutes",
+        "calories": "350",
+        "ingredients": [
+          "Quinoa",
+          "Chickpeas",
+          "Cucumber",
+          "Cherry tomatoes",
+          "Feta cheese",
+          "Olive oil"
+        ],
+        "instructions": [
+          "Cook quinoa according to package instructions.",
+          "Combine quinoa, chickpeas, cucumber, tomatoes, and feta cheese.",
+          "Drizzle with olive oil and toss well."
+        ]
+      },
+      {
+        "name": "Mediterranean Chickpea Salad",
+        "imageUrl":
+            "https://images.unsplash.com/photo-1561043433-aaf687c4cf04?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fE1lZGl0ZXJyYW5lYW4lMjBDaGlja3BlYSUyMFNhbGFkfGVufDB8fDB8fHww",
+        "timeNeeded": "15 minutes",
+        "calories": "350",
+        "ingredients": [
+          "Chickpeas",
+          "Cucumber",
+          "Cherry tomatoes",
+          "Red onion",
+          "Feta cheese",
+          "Kalamata olives",
+          "Olive oil",
+          "Lemon juice",
+          "Salt and pepper to taste"
+        ],
+        "instructions": [
+          "Combine chickpeas, cucumber, cherry tomatoes, red onion, feta cheese, and olives.",
+          "Drizzle with olive oil and lemon juice.",
+          "Season with salt and pepper. Toss well and serve."
+        ]
+      },
+      {
+        "name": "Turkey and Veggie Stir-Fry",
+        "imageUrl":
+            "https://images.unsplash.com/photo-1512058556646-c4da40fba323?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoaWtlbiUyMGFuZCUyMFZlZ2dpZSUyMFN0aXIlMjBGcnl8ZW58MHx8MHx8fDA%3D",
+        "timeNeeded": "20 minutes",
+        "calories": "380",
+        "ingredients": [
+          "Ground turkey",
+          "Broccoli",
+          "Bell peppers",
+          "Snap peas",
+          "Carrots",
+          "Soy sauce",
+          "Ginger",
+          "Garlic",
+          "Rice"
+        ],
+        "instructions": [
+          "Cook ground turkey in a skillet until browned.",
+          "Add broccoli, bell peppers, snap peas, and carrots. Sauté until vegetables are tender.",
+          "Mix in soy sauce, ginger, and garlic. Serve over rice."
+        ]
+      }
+    ]
+  },
+  {
+    "category": "dinner",
+    "recipes": [
+      {
+        "name": "Salmon with Quinoa and Roasted Vegetables",
+        "imageUrl":
+            "https://img.freepik.com/free-photo/grilled-salmon-fillet-with-fresh-vegetables-salad-generated-by-ai_188544-54076.jpg?w=1060&t=st=1703929634~exp=1703930234~hmac=c6d27747814866602ab6ba1bdfd9952f2a06d112935e5172dc502afc92775acf",
+        "timeNeeded": "30 minutes",
+        "calories": "450",
+        "ingredients": [
+          "Salmon fillets",
+          "Quinoa",
+          "Broccoli",
+          "Carrots",
+          "Olive oil"
+        ],
+        "instructions": [
+          "Preheat the oven and bake salmon.",
+          "Cook quinoa according to package instructions.",
+          "Roast broccoli and carrots with olive oil.",
+          "Serve salmon on a bed of quinoa with roasted vegetables."
+        ]
+      },
+      {
+        "name": "Vegetarian Stuffed Bell Peppers",
+        "imageUrl":
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh12Lgc9oufLRBXZ9XwGaGcDppMKtlhIzfiQ&usqp=CAU",
+        "timeNeeded": "40 minutes",
+        "calories": "300",
+        "ingredients": [
+          "Bell peppers",
+          "Quinoa",
+          "Black beans",
+          "Corn",
+          "Tomato sauce",
+          "Cheese"
+        ],
+        "instructions": [
+          "Cut bell peppers in half and remove seeds.",
+          "Cook quinoa and mix with black beans and corn.",
+          "Stuff bell peppers with quinoa mixture.",
+          "Top with tomato sauce and cheese, bake until peppers are tender."
+        ]
+      },
+      {
+        "name": "Chicken and Vegetable Skewers",
+        "imageUrl":
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq1GjCWD2I7R9vZJOT7FmBJlqMm3WDdsu0rQ&usqp=CAU",
+        "timeNeeded": "25 minutes",
+        "calories": "420",
+        "ingredients": [
+          "Chicken breast",
+          "Bell peppers",
+          "Red onion",
+          "Cherry tomatoes",
+          "Zucchini",
+          "Olive oil",
+          "Lemon",
+          "Garlic",
+          "Rosemary",
+          "Salt and pepper to taste"
+        ],
+        "instructions": [
+          "Cut chicken and vegetables into skewer-sized pieces.",
+          "In a bowl, mix olive oil, lemon juice, minced garlic, rosemary, salt, and pepper.",
+          "Marinate chicken and vegetables. Thread onto skewers and grill until cooked.",
+          "Serve with a squeeze of lemon."
+        ]
+      },
+      {
+        "name": "Black Bean and Quinoa Stuffed Peppers",
+        "imageUrl":
+            "https://bevcooks.com/wp-content/uploads/2013/07/stuffed-peppers.jpg",
+        "timeNeeded": "35 minutes",
+        "calories": "'320'",
+        "ingredients": [
+          "Bell peppers",
+          "Black beans",
+          "Quinoa",
+          "Corn",
+          "Tomato",
+          "Cumin",
+          "Chili powder",
+          "Cheese",
+          "Cilantro",
+          "Lime"
+        ],
+        "instructions": [
+          "Cut bell peppers in half and remove seeds.",
+          "Cook quinoa according to package instructions.",
+          "Mix quinoa with black beans, corn, tomato, cumin, and chili powder.",
+          "Stuff peppers, top with cheese, and bake until peppers are tender."
+        ]
+      }
+    ]
+  },
+  {
+    "category": "sugar free",
+    "recipes": [
+      {
+        "name": "Baked Apples with Cinnamon",
+        "imageUrl":
+            "https://images.unsplash.com/photo-1603779702195-c67793335b4c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8QmFrZWQlMjBBcHBsZXMlMjB3aXRoJTIwQ2lubmFtb258ZW58MHx8MHx8fDA%3D",
+        "timeNeeded": "30 minutes",
+        "calories": "200",
+        "ingredients": ["Apples", "Cinnamon", "Stevia or sugar substitute"],
+        "instructions": [
+          "Preheat the oven.",
+          "Core and slice apples.",
+          "Sprinkle with cinnamon and sweetener.",
+          "Bake until apples are tender."
+        ]
+      },
+      {
+        "name": "Chia Seed Pudding",
+        "imageUrl":
+            "https://plus.unsplash.com/premium_photo-1668615553286-e6a05efce4b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q2hpYSUyMFNlZWQlMjBQdWRkaW5nfGVufDB8fDB8fHww",
+        "timeNeeded": "4 hours (chilling time)",
+        "calories": "250",
+        "ingredients": [
+          "Chia seeds",
+          "Almond milk",
+          "Vanilla extract",
+          "Berries"
+        ],
+        "instructions": [
+          "Mix chia seeds, almond milk, and vanilla extract.",
+          "Refrigerate for at least 4 hours or overnight.",
+          "Top with berries before serving."
+        ]
+      },
+      {
+        "name": "Berry and Spinach Smoothie",
+        "imageUrl":
+            "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QmVycnklMjBhbmQlMjBTcGluYWNoJTIwU21vb3RoaWV8ZW58MHx8MHx8fDA%3D",
+        "timeNeeded": "5 minutes",
+        "calories": "150",
+        "ingredients": [
+          "Mixed berries",
+          "Baby spinach",
+          "Greek yogurt",
+          "Almond milk",
+          "Chia seeds",
+          "Ice cubes"
+        ],
+        "instructions": [
+          "Blend mixed berries, baby spinach, Greek yogurt, almond milk, and chia seeds.",
+          "Add ice cubes and blend until smooth.",
+          "Pour into a glass and enjoy!"
+        ]
+      },
+      {
+        "name": "Zucchini Noodles with Pesto",
+        "imageUrl":
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgD1Gu5ReAKemBfDQ9hfOielw95UENJhgfzQ&usqp=CAU",
+        "timeNeeded": "15 minutes",
+        "calories": "120",
+        "ingredients": [
+          "Zucchini",
+          "Cherry tomatoes",
+          "Basil pesto",
+          "Parmesan cheese",
+          "Pine nuts",
+          "Salt and pepper to taste"
+        ],
+        "instructions": [
+          "Spiralize zucchini into noodles.",
+          "Toss zucchini noodles with cherry tomatoes, basil pesto, Parmesan cheese, and pine nuts.",
+          "Season with salt and pepper. Serve chilled."
+        ]
+      }
+    ]
+  },
+  {
+    "category": "low calories",
+    "recipes": [
+      {
+        "name": "Cucumber Avocado Salad",
+        "imageUrl":
+            "https://natashaskitchen.com/wp-content/uploads/2018/10/Cucumber-Salad-4-500x500.jpg",
+        "timeNeeded": "10 minutes",
+        "calories": "100",
+        "ingredients": [
+          "Cucumber, sliced",
+          "Avocado, diced",
+          "Cherry tomatoes, halved",
+          "Red onion, thinly sliced",
+          "Fresh cilantro",
+          "Lime juice",
+          "Salt and pepper to taste"
+        ],
+        "instructions": [
+          "In a bowl, combine cucumber, avocado, cherry tomatoes, and red onion.",
+          "Add fresh cilantro and drizzle with lime juice. Season with salt and pepper.",
+          "Toss gently and serve chilled."
+        ]
+      },
+      {
+        "name": "Egg White Omelette with Spinach",
+        "imageUrl":
+            "https://www.carriesexperimentalkitchen.com/wp-content/uploads/2019/05/Spinach.-Mushroom-Havarti-Egg-White-Omelette-2-500x375.jpg",
+        "timeNeeded": "15 minutes",
+        "calories": "120",
+        "ingredients": [
+          "Egg whites",
+          "Fresh spinach",
+          "Tomatoes, diced",
+          "Onion, chopped",
+          "Bell pepper, diced",
+          "Salt and pepper to taste"
+        ],
+        "instructions": [
+          "Whisk egg whites until frothy.",
+          "In a non-stick pan, sauté spinach, tomatoes, onion, and bell pepper.",
+          "Pour egg whites over the vegetables. Cook until set. Season with salt and pepper."
+        ]
+      },
+      {
+        "name": "Mango Salsa with Baked Cod",
+        "imageUrl":
+            "https://static.wixstatic.com/media/6a2b99_f9c6e6fcfba64079b33d3cef3bd947a0~mv2.jpg/v1/fill/w_528,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-empty-state.jpg",
+        "timeNeeded": "20 minutes",
+        "calories": "130",
+        "ingredients": [
+          "Cod fillets",
+          "Mango",
+          "Red onion",
+          "Cilantro",
+          "Lime juice",
+          "Salt and pepper to taste"
+        ],
+        "instructions": [
+          "Preheat the oven and bake cod fillets until cooked.",
+          "Dice mango and red onion. Mix with chopped cilantro and lime juice.",
+          "Season with salt and pepper. Serve mango salsa over baked cod."
+        ]
+      },
+      {
+        "name": "Stuffed Cabbage Rolls",
+        "imageUrl":
+            "https://www.allrecipes.com/thmb/kNECUgH9AJlddBLjmJrw_CNDSFM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20045-cabbage-rolls-ii-ddmfs-2X1-0114-5c9d7dd49699443496ab4f6bc2007d0b.jpg",
+        "timeNeeded": "45 minutes",
+        "calories": "110",
+        "ingredients": [
+          "Cabbage leaves",
+          "Lean ground turkey",
+          "Quinoa",
+          "Tomato sauce",
+          "Garlic",
+          "Italian herbs",
+          "Salt and pepper to taste"
+        ],
+        "instructions": [
+          "Blanch cabbage leaves and set aside.",
+          "Cook quinoa according to package instructions.",
+          "Mix ground turkey with cooked quinoa, tomato sauce, minced garlic, Italian herbs, salt, and pepper.",
+          "Fill cabbage leaves with the turkey mixture, roll, and bake until heated through."
+        ]
+      }
+    ]
+  },
+  {
+    "category": "vegetarian",
+    "recipes": [
+      {
+        "name": "Spinach and Feta Stuffed Mushrooms",
+        "imageUrl":
+            "https://skinnysouthernrecipes.com/wp-content/uploads/2021/03/Air-Fryer-Spinach-and-Feta-Stuffed-Mushrooms-13-500x375.jpg",
+        "timeNeeded": "25 minutes",
+        "calories": "200",
+        "ingredients": [
+          "Mushrooms",
+          "Spinach",
+          "Feta cheese",
+          "Garlic",
+          "Olive oil"
+        ],
+        "instructions": [
+          "Remove stems from mushrooms and brush with olive oil.",
+          "Sauté spinach and garlic, mix with feta cheese.",
+          "Stuff mushrooms and bake until golden."
+        ]
+      },
+      {
+        "name": "Vegetarian Burrito Bowl",
+        "imageUrl":
+            "https://rainbowplantlife.com/wp-content/uploads/2022/09/burrito-bowl-cover-photo.jpg",
+        "timeNeeded": "30 minutes",
+        "calories": "400",
+        "ingredients": [
+          "Brown rice",
+          "Black beans",
+          "Corn",
+          "Avocado",
+          "Salsa",
+          "Lime"
+        ],
+        "instructions": [
+          "Cook brown rice according to package instructions.",
+          "Top rice with black beans, corn, avocado, salsa, and a squeeze of lime."
+        ]
+      },
+      {
+        "name": "Vegetable Stir-Fry with Tofu",
+        "imageUrl":
+            "https://www.eatingbirdfood.com/wp-content/uploads/2019/11/Tofu-Stir-Fry-3.jpg",
+        "timeNeeded": "20 minutes",
+        "calories": "220",
+        "ingredients": [
+          "Firm tofu",
+          "Broccoli",
+          "Snap peas",
+          "Carrots",
+          "Bell peppers",
+          "Soy sauce",
+          "Ginger",
+          "Garlic",
+          "Green onions",
+          "Rice"
+        ],
+        "instructions": [
+          "Press tofu to remove excess water and cut into cubes.",
+          "Stir-fry tofu, broccoli, snap peas, carrots, and bell peppers in a wok.",
+          "Mix soy sauce, ginger, and garlic. Pour over the stir-fry.",
+          "Serve over rice and garnish with chopped green onions."
+        ]
+      },
+      {
+        "name": "Eggplant and Chickpea Curry",
+        "imageUrl":
+            "https://www.thelastfoodblog.com/wp-content/uploads/2017/07/aubergine-and-chickpea-curry-f_i.jpg",
+        "timeNeeded": "30 minutes",
+        "calories": "250",
+        "ingredients": [
+          "Eggplant",
+          "Chickpeas",
+          "Tomatoes",
+          "Coconut milk",
+          "Curry spices",
+          "Cilantro",
+          "Rice"
+        ],
+        "instructions": [
+          "Sauté eggplant until golden brown.",
+          "Add chickpeas, diced tomatoes, coconut milk, and curry spices.",
+          "Simmer until eggplant is tender. Serve over rice and garnish with cilantro."
+        ]
+      }
+    ]
+  },
+  {
+    "category": "salad",
+    "recipes": [
+      {
+        "name": "Caprese Salad",
+        "imageUrl":
+            "https://www.cubesnjuliennes.com/wp-content/uploads/2022/08/Caprese-Salad-Recipe.jpg",
+        "timeNeeded": "10 minutes",
+        "calories": "250",
+        "ingredients": [
+          "Tomatoes",
+          "Fresh mozzarella",
+          "Basil",
+          "Balsamic glaze",
+          "Olive oil"
+        ],
+        "instructions": [
+          "Slice tomatoes and fresh mozzarella.",
+          "Arrange on a plate with fresh basil leaves.",
+          "Drizzle with balsamic glaze and olive oil."
+        ]
+      },
+      {
+        "name": "Cobb Salad",
+        "imageUrl":
+            "https://www.herwholesomekitchen.com/wp-content/uploads/2021/02/cobbsaladrecipe-1.jpg",
+        "timeNeeded": "15 minutes",
+        "calories": "350",
+        "ingredients": [
+          "Lettuce",
+          "Chicken breast",
+          "Avocado",
+          "Tomato",
+          "Bacon",
+          "Blue cheese",
+          "Dressing"
+        ],
+        "instructions": [
+          "Chop lettuce and arrange on a plate.",
+          "Top with grilled chicken, avocado, tomato, bacon, and blue cheese.",
+          "Drizzle with dressing."
+        ]
+      },
+      {
+        "name": "Quinoa and Kale Salad",
+        "imageUrl":
+            "https://www.recipetineats.com/wp-content/uploads/2018/04/Kale-Quinoa-Salad_4.jpg",
+        "timeNeeded": "15 minutes",
+        "calories": "280",
+        "ingredients": [
+          "Quinoa",
+          "Kale",
+          "Cherry tomatoes",
+          "Cucumber",
+          "Feta cheese",
+          "Balsamic vinaigrette",
+          "Salt and pepper to taste"
+        ],
+        "instructions": [
+          "Cook quinoa according to package instructions.",
+          "Massage kale to soften. Toss kale, quinoa, cherry tomatoes, cucumber, and feta cheese.",
+          "Drizzle with balsamic vinaigrette. Season with salt and pepper."
+        ]
+      },
+      {
+        "name": "Asian Noodle Salad",
+        "imageUrl":
+            "https://feelgoodfoodie.net/wp-content/uploads/2017/05/Asian-Noodle-Salad-9.jpg",
+        "timeNeeded": "20 minutes",
+        "calories": "320",
+        "ingredients": [
+          "Rice noodles",
+          "Cabbage",
+          "Carrots",
+          "Edamame",
+          "Cucumber",
+          "Sesame ginger dressing",
+          "Cilantro",
+          "Green onions"
+        ],
+        "instructions": [
+          "Cook rice noodles according to package instructions.",
+          "Shred cabbage, julienne carrots, and dice cucumber.",
+          "Toss noodles, cabbage, carrots, edamame, and cucumber with sesame ginger dressing.",
+          "Garnish with cilantro and green onions."
+        ]
+      }
+    ]
+  },
+  {
+    "category": "soup",
+    "recipes": [
+      {
+        "name": "Minestrone Soup",
+        "imageUrl":
+            "https://www.vegrecipesofindia.com/wp-content/uploads/2021/03/minestrone-soup.jpg",
+        "timeNeeded": "45 minutes",
+        "calories": "250",
+        "ingredients": [
+          "Vegetable broth",
+          "Tomatoes",
+          "Carrots",
+          "Zucchini",
+          "Kidney beans",
+          "Whole grain pasta"
+        ],
+        "instructions": [
+          "Sauté vegetables in a pot.",
+          "Add vegetable broth and bring to a boil.",
+          "Simmer until vegetables are tender.",
+          "Add kidney beans and pasta, cook until pasta is done."
+        ]
+      },
+      {
+        "name": "Broccoli Cheddar Soup",
+        "imageUrl":
+            "https://sugarspunrun.com/wp-content/uploads/2022/10/Broccoli-Cheddar-Soup-Recipe-1-of-1-2.jpg",
+        "timeNeeded": "30 minutes",
+        "calories": "300",
+        "ingredients": [
+          "Broccoli",
+          "Cheddar cheese",
+          "Onion",
+          "Garlic",
+          "Vegetable broth",
+          "Milk"
+        ],
+        "instructions": [
+          "Sauté onion and garlic, add broccoli and cook until tender.",
+          "Blend with vegetable broth and milk.",
+          "Stir in cheddar cheese until melted."
+        ]
+      },
+      {
+        "name": "Tomato Basil Soup",
+        "imageUrl":
+            "https://www.cubesnjuliennes.com/wp-content/uploads/2022/09/Tomato-Basil-Soup-Recipe.jpg",
+        "timeNeeded": "30 minutes",
+        "calories": "220",
+        "ingredients": [
+          "Tomatoes",
+          "Vegetable broth",
+          "Onion",
+          "Garlic",
+          "Fresh basil",
+          "Olive oil",
+          "Salt and pepper to taste"
+        ],
+        "instructions": [
+          "Sauté onion and garlic in olive oil until softened.",
+          "Add tomatoes and vegetable broth. Simmer until tomatoes are cooked.",
+          "Blend until smooth. Stir in chopped fresh basil.",
+          "Season with salt and pepper. Serve hot."
+        ]
+      },
+      {
+        "name": "Lentil and Vegetable Soup",
+        "imageUrl":
+            "https://www.cookingclassy.com/wp-content/uploads/2017/01/lentil-soup-2.jpg",
+        "timeNeeded": "40 minutes",
+        "calories": "250",
+        "ingredients": [
+          "Lentils",
+          "Carrots",
+          "Celery",
+          "Onion",
+          "Garlic",
+          "Vegetable broth",
+          "Spinach",
+          "Cumin, coriander, turmeric",
+          "Salt and pepper to taste"
+        ],
+        "instructions": [
+          "Sauté carrots, celery, onion, and garlic in a pot.",
+          "Add lentils, vegetable broth, and spices. Simmer until lentils are tender.",
+          "Stir in spinach and cook until wilted.",
+          "Season with salt and pepper. Serve warm."
+        ]
+      }
+    ]
+  }
+];

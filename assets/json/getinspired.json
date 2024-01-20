@@ -1,0 +1,81 @@
+[
+  {
+    "category": "Recipes",
+    "recipes": [
+      {
+        "name": "Quinoa Salad with Chickpeas",
+        "imageUrl": "https://images.unsplash.com/photo-1505576633757-0ac1084af824?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "timeNeeded": "15 minutes",
+        "calories": "350",
+        "ingredients": [
+          "Quinoa",
+          "Chickpeas",
+          "Cucumber",
+          "Cherry tomatoes",
+          "Feta cheese",
+          "Olive oil"
+        ],
+        "instructions": [
+          "Cook quinoa according to package instructions.",
+          "Combine quinoa, chickpeas, cucumber, tomatoes, and feta cheese.",
+          "Drizzle with olive oil and toss well."
+        ]
+      },
+      {
+        "name": "Salmon with Roasted Vegetables",
+        "imageUrl": "https://img.freepik.com/free-photo/grilled-salmon-fillet-with-fresh-vegetables-salad-generated-by-ai_188544-54076.jpg?w=1060&t=st=1703929634~exp=1703930234~hmac=c6d27747814866602ab6ba1bdfd9952f2a06d112935e5172dc502afc92775acf",
+        "timeNeeded": "30 minutes",
+        "calories": "450",
+        "ingredients": [
+          "Salmon fillets",
+          "Quinoa",
+          "Broccoli",
+          "Carrots",
+          "Olive oil"
+        ],
+        "instructions": [
+          "Preheat the oven and bake salmon.",
+          "Cook quinoa according to package instructions.",
+          "Roast broccoli and carrots with olive oil.",
+          "Serve salmon on a bed of quinoa with roasted vegetables."
+        ]
+      },
+      {
+        "name": "Chia Seed Pudding",
+        "imageUrl": "https://plus.unsplash.com/premium_photo-1668615553286-e6a05efce4b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q2hpYSUyMFNlZWQlMjBQdWRkaW5nfGVufDB8fDB8fHww",
+        "timeNeeded": "4 hours (chilling time)",
+        "calories": "250",
+        "ingredients": [
+          "Chia seeds",
+          "Almond milk",
+          "Vanilla extract",
+          "Berries"
+        ],
+        "instructions": [
+          "Mix chia seeds, almond milk, and vanilla extract.",
+          "Refrigerate for at least 4 hours or overnight.",
+          "Top with berries before serving."
+        ]
+      },
+      {
+        "name": "Egg White Omelette with Spinach",
+        "imageUrl": "https://www.carriesexperimentalkitchen.com/wp-content/uploads/2019/05/Spinach.-Mushroom-Havarti-Egg-White-Omelette-2-500x375.jpg",
+        "timeNeeded": "15 minutes",
+        "calories": "120",
+        "ingredients": [
+          "Egg whites",
+          "Fresh spinach",
+          "Tomatoes, diced",
+          "Onion, chopped",
+          "Bell pepper, diced",
+          "Salt and pepper to taste"
+        ],
+        "instructions": [
+          "Whisk egg whites until frothy.",
+          "In a non-stick pan, sauté spinach, tomatoes, onion, and bell pepper.",
+          "Pour egg whites over the vegetables. Cook until set. Season with salt and pepper."
+        ]
+      }
+    ]
+  }
+]

@@ -1,41 +1,49 @@
-import 'package:fitnessapp/view/pages/diet_page/categories/breakfast_categorie.dart';
-import 'package:fitnessapp/view/pages/diet_page/categories/dinner_categorie.dart';
-import 'package:fitnessapp/view/pages/diet_page/categories/lowcal_categorie.dart';
-import 'package:fitnessapp/view/pages/diet_page/categories/lunch_categorie.dart';
-import 'package:fitnessapp/view/pages/diet_page/categories/salad_categorie.dart';
-import 'package:fitnessapp/view/pages/diet_page/categories/soup_categorie.dart';
-import 'package:fitnessapp/view/pages/diet_page/categories/sugarfree_categories.dart';
-import 'package:fitnessapp/view/pages/diet_page/categories/veg_categorie.dart';
+import 'dart:convert';
+import 'package:fitnessapp/view/pages/diet_page/categories/category_page.dart';
+import 'package:fitnessapp/view/pages/diet_page/components/foodconatiner_shimmer.dart';
+import 'package:fitnessapp/view/pages/favorite_page/favorite_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:shimmer/shimmer.dart';
 
 import 'components/food_container.dart';
 
-class Diet_page extends StatelessWidget {
+class Diet_page extends StatefulWidget {
   Diet_page({super.key});
 
-  List categorylist = [
-    [Icons.coffee, 'Breakfast', BreakFast()],
-    [Icons.rice_bowl, 'Lunch', Lunch()],
-    [Icons.dinner_dining_rounded, 'Dinner', DinnerPage()],
-    [Icons.eco_outlined, 'Veg', Veg()],
-    [Icons.soup_kitchen_outlined, 'Soup', Soup()],
-    [Icons.trending_down, 'Low kcal', Lowcal()],
-    [Icons.spa_outlined, 'Salad', Salad()],
-    [Icons.snowing, 'Sugarfree', SugarFree()],
-  ];
-
-  List foodimg = [
-    "assets/images/vegies.jpg",
-    "assets/images/vegies.jpg",
-    "assets/images/vegies.jpg",
-    "assets/images/vegies.jpg",
-    "assets/images/vegies.jpg",
-    "assets/images/vegies.jpg",
-    "assets/images/vegies.jpg",
-    "assets/images/vegies.jpg",
-  ];
-
   @override
+  State<Diet_page> createState() => _Diet_pageState();
+}
+
+class _Diet_pageState extends State<Diet_page> {
+  List categorylist = [
+    [
+      Icons.coffee,
+      'Breakfast',
+    ],
+    [
+      Icons.rice_bowl,
+      'Lunch',
+    ],
+    [Icons.dinner_dining_rounded, 'Dinner'],
+    [Icons.snowing, 'Sugarfree'],
+    [Icons.trending_down, 'Low kcal'],
+    [Icons.eco_outlined, 'Veg'],
+    [Icons.spa_outlined, 'Salad'],
+    [Icons.soup_kitchen_outlined, 'Soup'],
+  ];
+
+  Future<List<Map<String, dynamic>>> loadgetinspired() async {
+    final jsonString =
+        await rootBundle.loadString('assets/json/getinspired.json');
+    final jsonData = json.decode(jsonString) as List<dynamic>;
+
+    List<Map<String, dynamic>> recipes =
+        List<Map<String, dynamic>>.from(jsonData[0]['recipes']);
+
+    return recipes;
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -51,10 +59,16 @@ class Diet_page extends StatelessWidget {
               children: [
                 CircleAvatar(
                   backgroundColor: Colors.indigo.shade400,
-                  child: const Center(
-                    child: Icon(
-                      Icons.favorite,
-                      color: Colors.white,
+                  child: Center(
+                    child: InkWell(
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Favorite_Page())),
+                      child: Icon(
+                        Icons.favorite,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
@@ -102,12 +116,34 @@ class Diet_page extends StatelessWidget {
                 ],
               ),
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: List.generate(foodimg.length, (index) {
-                  return Food_Container(img: foodimg[index]);
-                }),
+            Container(
+              height: 390,
+              width: double.infinity,
+              child: FutureBuilder(
+                future: loadgetinspired(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return Center(child: CircularProgressIndicator());
+                  } else if (snapshot.hasError) {
+                    print('Error loading data: ${snapshot.error}');
+                    return Center(child: Text("Error loading data"));
+                  } else {
+                    List<Map<String, dynamic>> getinspired = snapshot.data!;
+
+                    return ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: getinspired.length,
+                      itemBuilder: (context, index) {
+                          return Food_Container(
+                              img: getinspired[index]["imageUrl"],
+                              name: getinspired[index]["name"],
+                              timeneeded: getinspired[index]["timeNeeded"],
+                              calories: getinspired[index]["calories"]);
+
+                      },
+                    );
+                  }
+                },
               ),
             ),
             Padding(
@@ -125,6 +161,9 @@ class Diet_page extends StatelessWidget {
                 ],
               ),
             ),
+
+            ///category container
+
             Container(
               height: 290,
               width: 390,
@@ -140,8 +179,9 @@ class Diet_page extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => categorylist[index][2],
-                              ));
+                                  builder: (context) => Category_page(
+                                        index: index,
+                                      )));
                         },
                         child: Container(
                           decoration: BoxDecoration(
